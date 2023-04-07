@@ -28,7 +28,7 @@ hatch shell
 ### Generate Bindings
 ```bash
 cd examples/simple
-cxbind gen
+cxbind
 ```
 
 ### Build
