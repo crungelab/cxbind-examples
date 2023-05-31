@@ -1,4 +1,6 @@
-from ._core import add
+from ._core import Simple
 
-print(add(2, 2))
-help(add)
+simple = Simple()
+
+print(simple.add(2, 2))
+help(simple.add)

@@ -1,3 +1,11 @@
+#[build-system]
+#requires = ["hatchling"]
+#build-backend = "hatchling.build"
+[build-system]
+requires = ["cxbuild==0.1.1", "setuptools", "wheel"]
+build-backend = "cxbuild.backend"
+
+
 [project]
 name = "cxbind-examples"
 version = "0.1.0"
@@ -8,14 +16,14 @@ license = { file = "LICENSE" }
 keywords = []
 authors = [{ name = "Kurtis Fields", email = "kurtisfields@gmail.com" }]
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
 ]
 
 #dependencies = [
@@ -35,19 +43,14 @@ changelog = "https://github.com/crungelab/cxbind-examples/blob/main/CHANGELOG.md
 
 
 [tool.hatch.envs.default]
-dependencies = ["pytest", "pytest-cov"]
+dependencies = ["procure", "cxbind==0.1.1", "cxbuild==0.1.1", "build", "pytest", "pytest-cov"]
 
 [tool.hatch.envs.default.scripts]
 cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=deeper --cov=tests {args}"
 no-cov = "cov --no-cov {args}"
 
 [tool.hatch.envs.docs]
-dependencies = [
-  "sphinx",
-  "furo",
-  "sphinxcontrib-apidoc",
-  "sphinxemoji"
-]
+dependencies = ["sphinx", "furo", "sphinxcontrib-apidoc", "sphinxemoji"]
 
 [tool.hatch.envs.docs.scripts]
 build = "sphinx-build docs docs/_build"
