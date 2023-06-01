@@ -1,8 +1,5 @@
-#[build-system]
-#requires = ["hatchling"]
-#build-backend = "hatchling.build"
 [build-system]
-requires = ["cxbuild==0.1.1", "setuptools", "wheel"]
+requires = ["cxbuild==0.1.2", "setuptools", "wheel"]
 build-backend = "cxbuild.backend"
 
 
@@ -43,7 +40,7 @@ changelog = "https://github.com/crungelab/cxbind-examples/blob/main/CHANGELOG.md
 
 
 [tool.hatch.envs.default]
-dependencies = ["procure", "cxbind==0.1.1", "cxbuild==0.1.1", "build", "pytest", "pytest-cov"]
+dependencies = ["procure", "cxbind==0.1.1", "cxbuild==0.1.2", "build", "pytest", "pytest-cov"]
 
 [tool.hatch.envs.default.scripts]
 cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=deeper --cov=tests {args}"
