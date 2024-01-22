@@ -35,3 +35,8 @@ cxbind
 ```bash
 cxbuild
 ```
+
+### Develop
+```bash
+cxbuild develop
+```

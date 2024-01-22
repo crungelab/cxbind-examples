@@ -1,14 +1,14 @@
 [build-system]
-requires = ["cxbuild>=0.1.1"]
+requires = ["cxbuild"]
 build-backend = "cxbuild.backend"
 
 [project]
 name = "cxb_simple"
-version = "0.1.0"
+version = "0.3"
 description="A minimal example package (with pybind11)"
 readme = "README.md"
 authors = [
-  { name = "My Name", email = "me@email.com" },
+  { name = "Kurtis Fields", email = "kurtisfields@gmail.com" },
 ]
 requires-python = ">=3.8"
 classifiers = [

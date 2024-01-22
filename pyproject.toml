@@ -1,11 +1,11 @@
 [build-system]
-requires = ["cxbuild==0.1.2", "setuptools", "wheel"]
+requires = ["cxbuild", "setuptools", "wheel"]
 build-backend = "cxbuild.backend"
 
 
 [project]
 name = "cxbind-examples"
-version = "0.1.0"
+version = "0.3"
 description = 'cxbind examples'
 readme = "README.md"
 requires-python = ">=3.8"
@@ -23,8 +23,8 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 
-#dependencies = [
-#]
+dependencies = [
+]
 
 #dynamic = ["version"]
 
@@ -40,7 +40,7 @@ changelog = "https://github.com/crungelab/cxbind-examples/blob/main/CHANGELOG.md
 
 
 [tool.hatch.envs.default]
-dependencies = ["procure", "cxbind==0.1.1", "cxbuild==0.1.2", "cmake", "build", "pytest", "pytest-cov"]
+dependencies = ["procure", "cxbind", "cxbuild", "cmake", "wheel", "build", "pytest", "pytest-cov"]
 
 [tool.hatch.envs.default.scripts]
 cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=deeper --cov=tests {args}"
