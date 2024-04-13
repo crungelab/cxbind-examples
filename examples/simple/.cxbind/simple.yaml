@@ -8,3 +8,8 @@ flags: [
     '-std=c++17',
     '-I./src'
 ]
+
+'function.Simple::add':
+  arguments:
+    i: { default: 0}
+    j: { default: 0}
